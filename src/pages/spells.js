@@ -5,6 +5,10 @@ const base_url = "https://hp-api.onrender.com/api/spells";
 
 const Spells = () => {
   const [spells, setSpells] = useState([]);
+  const [id, setId] = useState([]);
+  const [name, setNames] = useState([]);
+  const [description, setDescription] = useState([]);
+
 
   useEffect(() => {
     const fetchSpells = async () => {
@@ -26,7 +30,7 @@ const Spells = () => {
       <ul>
         {spells.map((spell, index) => (
           <li key={index}>
-            <p>{spell.spell} </p></li>
+            <p> </p> <p>{spell.name} </p><p>{spell.description} </p></li>
         ))}
       </ul>
     </div>
