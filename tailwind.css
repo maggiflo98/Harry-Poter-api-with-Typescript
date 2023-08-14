@@ -13,15 +13,15 @@
   
 /* .card {
   @apply p-4 rounded-lg shadow-md bg-white;
-} */
+} 
 
-/* .card p {
+.card p{
   @apply font-semibold;
-} */
+} 
 
-/* .container {
+.container {
   @apply p-8;
-} */
+}  */
 
   /* src/css/styles.css */
 

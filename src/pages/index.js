@@ -3,14 +3,18 @@ import axiosInstance from "../../axios";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
 import Image from 'next/image';
+import SearchBar from './SearchBar';
 import { useRouter } from "next/router";
 import {characterImageMap} from "./charactermaps";
+
 
 
 const base_url = "https://hp-api.onrender.com/api/characters";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -34,13 +38,33 @@ const Home = () => {
     router.push(`/characters/${id}`);
   };
 
+  const handleSearch = searchTerm => {
+    setSearchQuery(searchTerm);
+     
+    if (searchTerm === "") {
+      setFilteredCharacters([]); // Clear filtered characters if search is empty
+    } else {
+      const filtered = characters.filter(character => {
+        const nameMatch = character.name.toLowerCase().includes(searchTerm.toLowerCase());
+        const houseMatch = character.house && character.house.toLowerCase().includes(searchTerm.toLowerCase());
+        return nameMatch || houseMatch;
+      });
+
+      setFilteredCharacters(filtered);
+    }
+  };
+
+  const displayCharacters = searchQuery ? filteredCharacters : characters;
+  
+
   return (
   <div>
      <h1>Harry Potter Character</h1> 
-     <a href ="/spells">harry potter spells</a>
+     <a href ="/spells"> spells</a>
+     <SearchBar onSearch={handleSearch} />
            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {characters.map((character) => (
-          <li key={character.name} className="border border-blue-500 p-2 rounded-md">
+        {displayCharacters.map((character) => (
+          <li key={character._id} className="border border-blue-500 p-2 rounded-md">
             <div>
               <p className="font-semibold">{character.name}</p>
               <Image
