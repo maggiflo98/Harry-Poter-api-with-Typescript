@@ -44,8 +44,8 @@ const CharacterDetails = () => {
   return (
     <div className="bg-cover bg-center min-h-screen flex-col flex justify-center items-center bg-teal-500 bg-[url('../../public/images/wand3.jpg')]" >
       <div className="flex items-center">
-        <div className="flex-none p-8">
-      <h1 className="text-white text-center p-10 ml-8">{character.name} Details</h1>
+        <div className="flex-none p-5">
+      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8">Let's know {character.name}</h1>
       <Image
         src={characterImageMap[character.name]}
         width={500}
@@ -55,18 +55,18 @@ const CharacterDetails = () => {
       />
       </div>
       {/* Rest of your character details */}
-      <div className="flex-grow p-8 text-white">
-      <p className="text-white">Date of Birth: {character.dateOfBirth}</p>
-       <p className="text-white">House: {character.house}</p>
+      <div className="flex-grow p-2 text-white">
+      <p className="text-amber-700 p-2 ">Date of Birth: {character.dateOfBirth}</p>
+       <p className="text-amber-700 p-2">House: {character.house}</p>
        {/* <p>Wand:{character.wand.wood}</p> */}
-      <p className="text-white">Name:{character.name}</p>
-       <p className="text-white">Actor:{character.actor}</p>
-      <p className="text-white">Gender:{character.gender}</p>
-       <p className="text-white">Wand Name: {character.wand && character.wand.core}</p>
-       <p className="text-white">Wand Wood:{character.wand && character.wand.wood}</p>
-      <p className="text-white">Patronus:{character.patronus}</p>
-      <p className="text-white">Species:{character.species}</p>
-      <p className="text-white">Ancestry:{character.ancestry}</p>
+      <p className="text-amber-700 p-2">Name:  {character.name}</p>
+       <p className="text-amber-700 p-2">Actor: {character.actor}</p>
+      <p className="text-amber-700 p-2">Gender: {character.gender}</p>
+       <p className="text-amber-700 p-2">Wand Name: {character.wand && character.wand.core}</p>
+       <p className="text-amber-700 p-2">Wand Wood: {character.wand && character.wand.wood}</p>
+      <p className="text-amber-700 p-2">Patronus: {character.patronus}</p>
+      <p className="text-amber-700 p-2">Species: {character.species}</p>
+      <p className="text-amber-700 p-2">Ancestry: {character.ancestry}</p>
     </div>
     </div>
     </div>

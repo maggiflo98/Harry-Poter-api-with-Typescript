@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ html,
+ body{
 
+ }
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -22,8 +25,8 @@ body {
   
 }
 
-/* @font-face {
-  font-family: 'MyCustomFont';
-  src: url('../../public/Harryp.TTF') format('Harryp.TTF');
+@font-face {
+  font-family: 'burtons';
+  src: url('../../public/Burtons.otf');
   /* You can also include other font formats here if needed */
-/* } */ */
+}  

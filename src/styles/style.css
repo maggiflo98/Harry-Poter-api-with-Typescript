@@ -1,0 +1,13 @@
+/* In your CSS or a dedicated stylesheet */
+@font-face {
+    font-family: 'HarryPotterFont';
+    src: url('../../public/Harryp.TTF') format('truetype');
+    /* Add more font-related properties if needed */
+  }
+  
+  /* Apply the font to your h1 element */
+  h1 {
+    font-family: 'HarryPotterFont', sans-serif;
+    /* Add additional styles as needed */
+  }
+  

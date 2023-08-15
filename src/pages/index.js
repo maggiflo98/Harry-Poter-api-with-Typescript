@@ -6,10 +6,14 @@ import Image from 'next/image';
 import SearchBar from './SearchBar';
 import { useRouter } from "next/router";
 import {characterImageMap} from "./charactermaps";
+import { Poppins} from '@next/font/google'
+import { FcRight } from "react-icons/fc";
+import { Jolly_Lodger } from "@next/font/google";
 
 
 
 const base_url = "https://hp-api.onrender.com/api/characters";
+
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -59,15 +63,18 @@ const Home = () => {
   
 
   return (
-  <div>
-     <h1 >Harry Potter Character </h1> 
-     <a href ="/spells"> spells</a>
-     <SearchBar onSearch={handleSearch} />
-           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  
+  <div className="m-10 ml-10 ">
+          <div className=" flex- justify-between items-center mb-4">
+            <h1 className="  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 align-items text-center text-xl md:text-3xl font-burtons font-bold ">Harry Potter Characters</h1>
+                          <SearchBar className="flex font-bold"  onSearch={handleSearch} />
+                 
+     </div>
+           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {displayCharacters.map((character) => (
-          <li key={character._id} className="border border-blue-500 p-2 rounded-md">
+          <li key={character._id} className="border border-black p-2 rounded-md bg-gray-200 font-burtons">
             <div>
-              <p className="font-semibold">{character.name}</p>
+              <p className="font-semibold mb-3 text-amber-700">{character.name}</p>
               <Image
       src={characterImageMap[character.name]}
       width={500}
@@ -77,9 +84,9 @@ const Home = () => {
   
               <p className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-10 py-5  m-5 rounded-md">Date of Birth: {character.dateOfBirth}</p>
              {/* const characterId =`/characterdetails/${character.id}` */}
-             <button className="bg-brown text-amber-700 py-5 px-10 border-b-2 border-transparent
+             <button className=" flex items-center bg-brown text-amber-700 py-5 px-10 border-b-2 border-transparent
               hover:border-amber-950 transition duration 900 ease-out pb-1 px-10" 
-             onClick={() => handleButtonClick(character.id)}>Learn More
+             onClick={() => handleButtonClick(character.id)}>Learn More<FcRight className="pt-1 ml-2" />
              </button>         
       
             </div>
