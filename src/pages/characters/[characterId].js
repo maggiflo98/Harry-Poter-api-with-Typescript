@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import Image from 'next/image';
 import { gsap } from "gsap";
 import "tailwindcss/tailwind.css";
-import { characterImageMap } from "../charactermaps";
+import { characterImageMap } from "../character";
+
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState({});

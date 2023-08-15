@@ -5,10 +5,9 @@ import Link from "next/link";
 import Image from 'next/image';
 import SearchBar from './SearchBar';
 import { useRouter } from "next/router";
-import {characterImageMap} from "./charactermaps";
-import { Poppins} from '@next/font/google'
+import {characterImageMap} from "./character";
 import { FcRight } from "react-icons/fc";
-import { Jolly_Lodger } from "@next/font/google";
+
 
 
 
