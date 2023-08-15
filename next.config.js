@@ -7,4 +7,7 @@ module.exports = {
     /* Other config options */
     cssModules: true, // Enable CSS Modules
   };
+  module.exports = {
+    pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
+  }
   

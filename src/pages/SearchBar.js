@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "tailwindcss/tailwind.css";
 import "tailwindcss/tailwind.css";
+import Link from "next/link";
+
 
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -38,7 +40,8 @@ const SearchBar = ({ onSearch }) => {
       </svg>
     </span>
   </div>
-  <a href ="/spells" className="text-black-500 hover:underline font-burtons p-5 font-semibold  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500  "> Harry Potter Spells</a>
+ <Link href ="/spells" className="text-black-500 hover:underline font-burtons p-5 font-semibold  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500  "> Harry Potter Spells
+  </Link>
 </div>
 
   );

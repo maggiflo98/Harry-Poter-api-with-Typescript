@@ -4,7 +4,21 @@ import { useRouter } from "next/router";
 import Image from 'next/image';
 import { gsap } from "gsap";
 import "tailwindcss/tailwind.css";
-import { characterImageMap } from "../character";
+// //  import { characterImageMap } from "../character";
+//  import characterImageMap from "../character";
+// import CharacterList from "../character";
+import harryPotter from "../../../public/images/harry_potter.png";
+import ginnyWeasley from "../../../public/images/ginny_weasley.png";
+import ronWeasley from "../../../public/images/ron_weasley.png";
+ import dracoMalfoy from "../../../public/images/draco_malfoy.png"
+ import hermioneGranger from "../../../public/images/hermione_granger.png";
+ import minervaMcGonagall from "../../../public/images/minerva_mcgonagall.png";
+ import cedricDiggory from "../../../public/images/cedric_diggory.png";
+ import choChang from "../../../public/images/cho_chang.png";
+ import severusSnape from "../../../public/images/severus_snape.png";
+import rubeusHagrid from "../../../public/images/rubeus_hagrid.png";
+import lunaLovegood from "../../../public/images/luna_lovegood.png";
+import nevillelongbottom from "../../../public/images/neville_longbottom.png";
 
 
 const CharacterDetails = () => {
@@ -41,14 +55,27 @@ const CharacterDetails = () => {
     );
   
   }, []);
-
+  const characterImageMap = {
+    "Harry Potter": harryPotter,
+    "Ron Weasley":ronWeasley,
+    "Hermione Granger":hermioneGranger,
+    "Draco Malfoy":dracoMalfoy,
+    "Minerva McGonagall":minervaMcGonagall,
+    "Cedric Diggory":cedricDiggory,
+    "Cho Chang":choChang,
+    "Severus Snape":severusSnape,
+     "Rubeus Hagrid":rubeusHagrid,
+     "Luna Lovegood":lunaLovegood,
+     "Ginny Weasley":ginnyWeasley,
+     "Neville Longbottom":nevillelongbottom,
+  }
   return (
     <div className="bg-cover bg-center min-h-screen flex-col flex justify-center items-center bg-teal-500 bg-[url('../../public/images/wand3.jpg')]" >
       <div className="flex items-center">
         <div className="flex-none p-5">
-      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8">Let's know {character.name}</h1>
+      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8"> know {character.name}</h1>
       <Image
-        src={characterImageMap[character.name]}
+       src={characterImageMap[character.name]}
         width={500}
         height={500}
         alt="Character"
