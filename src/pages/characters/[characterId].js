@@ -19,6 +19,7 @@ import ronWeasley from "../../../public/images/ron_weasley.png";
 import rubeusHagrid from "../../../public/images/rubeus_hagrid.png";
 import lunaLovegood from "../../../public/images/luna_lovegood.png";
 import nevillelongbottom from "../../../public/images/neville_longbottom.png";
+import defaultAvatar  from "../../../public/images/default_avatar.png"
 
 
 const CharacterDetails = () => {
@@ -68,14 +69,15 @@ const CharacterDetails = () => {
      "Luna Lovegood":lunaLovegood,
      "Ginny Weasley":ginnyWeasley,
      "Neville Longbottom":nevillelongbottom,
+     default: defaultAvatar,
   }
   return (
     <div className="bg-cover bg-center min-h-screen flex-col flex justify-center items-center bg-teal-500 bg-[url('../../public/images/wand3.jpg')]" >
       <div className="flex items-center">
         <div className="flex-none p-5">
-      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8"> know {character.name}</h1>
+      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8"> Know {character.name}</h1>
       <Image
-       src={characterImageMap[character.name]}
+       src={characterImageMap[character.name] || characterImageMap.default}
         width={500}
         height={500}
         alt="Character"

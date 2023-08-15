@@ -21,6 +21,7 @@ import ronWeasley from "../../public/images/ron_weasley.png";
 import rubeusHagrid from "../../public/images/rubeus_hagrid.png";
 import lunaLovegood from "../../public/images/luna_lovegood.png";
 import nevillelongbottom from "../../public/images/neville_longbottom.png";
+import defaultAvatar  from "../../public/images/default_avatar.png";
 
 
 
@@ -88,6 +89,7 @@ const Home = () => {
      "Luna Lovegood":lunaLovegood,
      "Ginny Weasley":ginnyWeasley,
      "Neville Longbottom":nevillelongbottom,
+     default: defaultAvatar,
   }
   return (
   
@@ -103,7 +105,7 @@ const Home = () => {
             <div>
               <p className="font-semibold mb-3 text-amber-700">{character.name}</p>
               <Image
-      src={characterImageMap[character.name]}
+      src={characterImageMap[character.name] || characterImageMap.default}
       width={500}
       height={500}
       alt="Picture of the author"
