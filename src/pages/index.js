@@ -15,6 +15,7 @@ const Home = () => {
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+ 
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -59,7 +60,7 @@ const Home = () => {
 
   return (
   <div>
-     <h1>Harry Potter Character</h1> 
+     <h1 >Harry Potter Character </h1> 
      <a href ="/spells"> spells</a>
      <SearchBar onSearch={handleSearch} />
            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -74,9 +75,12 @@ const Home = () => {
       alt="Picture of the author"
     />
   
-              <p>Date of Birth: {character.dateOfBirth}</p>
+              <p className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-10 py-5  m-5 rounded-md">Date of Birth: {character.dateOfBirth}</p>
              {/* const characterId =`/characterdetails/${character.id}` */}
-             <button onClick={() => handleButtonClick(character.id)}>Learn More</button>         
+             <button className="bg-brown text-amber-700 py-5 px-10 border-b-2 border-transparent
+              hover:border-amber-950 transition duration 900 ease-out pb-1 px-10" 
+             onClick={() => handleButtonClick(character.id)}>Learn More
+             </button>         
       
             </div>
           </li>

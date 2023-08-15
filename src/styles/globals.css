@@ -21,3 +21,9 @@ body {
   background:linear-gradient(to bottom right, #3490dc, #000000) 
   
 }
+
+/* @font-face {
+  font-family: 'MyCustomFont';
+  src: url('../../public/Harryp.TTF') format('Harryp.TTF');
+  /* You can also include other font formats here if needed */
+/* } */ */

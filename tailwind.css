@@ -10,7 +10,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-  
+
+/* @font-face {
+  font-family: 'MyCustomFont';
+  src: url('./public/Harryp.TTF') format('Harryp.TTF');
+  /* You can also include other font formats here if needed */
+} */
+ 
 /* .card {
   @apply p-4 rounded-lg shadow-md bg-white;
 } 

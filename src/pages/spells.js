@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axiosInstance from "../../axios";
+import "tailwindcss/tailwind.css";
 
 const base_url = "https://hp-api.onrender.com/api/spells";
 
@@ -25,14 +26,20 @@ const Spells = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Spells</h1>
-      <ul>
+    <div className="bg-cover bg-center min-h screen  flex-col flex justify-center items-center bg-teal-500   bg-[url('../../public/images/wand3.jpg')]">
+      <h1 className="text-4x1 font-bold text-white  mt-3">Spells</h1>
+      {/* <ul className="w-full space-x-8 mr-5"> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  m-10 ml-10">
         {spells.map((spell, index) => (
-          <li key={index}>
-            <p> </p> <p>{spell.name} </p><p>{spell.description} </p></li>
+          <div key={index} 
+          className="p-6 rounded-lg shadow-md bg-white
+           transform transform-transition hover:scale-105">
+             <p className="font-semibold text-center mb-2 hover:underline hover:text-brown-600 text-black">{spell.name} </p>
+             <p className="font-semibold text-center text-brown">{spell.description} </p>
+             </div>
         ))}
-      </ul>
+        </div>
+      {/* </ul> */}
     </div>
   );
 };

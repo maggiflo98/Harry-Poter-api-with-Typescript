@@ -2,3 +2,9 @@
 const nextConfig = {}
 
 module.exports = nextConfig
+// next.config.js
+module.exports = {
+    /* Other config options */
+    cssModules: true, // Enable CSS Modules
+  };
+  
