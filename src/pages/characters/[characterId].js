@@ -76,12 +76,13 @@ const CharacterDetails = () => {
       <div className="flex items-center">
         <div className="flex-none p-5">
       <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8"> Know {character.name}</h1>
+      <div className="flex flex-col items-center justify-center h-full">
       <Image
        src={characterImageMap[character.name] || characterImageMap.default}
         width={500}
         height={500}
         alt="Character"
-        className="character-image" // Add this class
+        className="character-image w-32 md:w-64" 
       />
       </div>
       {/* Rest of your character details */}
@@ -97,6 +98,7 @@ const CharacterDetails = () => {
       <p className="text-amber-700 p-2">Patronus: {character.patronus}</p>
       <p className="text-amber-700 p-2">Species: {character.species}</p>
       <p className="text-amber-700 p-2">Ancestry: {character.ancestry}</p>
+    </div>
     </div>
     </div>
     </div>

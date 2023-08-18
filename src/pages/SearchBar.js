@@ -19,7 +19,7 @@ const SearchBar = ({ onSearch }) => {
     
     <label className="mr-2 mt-2 font-burtons font-bold  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500">Search:</label>
     <input
-      className="border-2 px-5"
+      className="border-2 px-5 py-2 rounded-md sm:w-32 md:w-48 lg:w-64"
       type="text"
       placeholder="Search by name or house..."
       value={searchQuery}
