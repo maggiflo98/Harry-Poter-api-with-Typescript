@@ -75,7 +75,7 @@ const CharacterDetails = () => {
     <div className="bg-cover bg-center min-h-screen flex-col flex justify-center items-center bg-teal-500 bg-[url('../../public/images/wand3.jpg')]" >
       <div className="flex items-center">
         <div className="flex-none p-5">
-      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl p-4 ml-8"> Know {character.name}</h1>
+      <h1 className=" font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 text-center text-4xl md:text-5xl lg:text-6xl text-center mb-8 mt-6 p-4 ml-8"> Know {character.name}</h1>
       <div className="flex flex-col items-center justify-center h-full">
       <Image
        src={characterImageMap[character.name] || characterImageMap.default}
